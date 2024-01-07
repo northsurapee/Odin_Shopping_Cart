@@ -1,17 +1,39 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* WHOLE NAV */
 nav {
     background-color: #333;
     padding: 1rem;
     text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    width: 13rem;
+}
+
+/* LINK  */
+.link-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
+    font-weight: 500;
 }
+
+.cart {
+    width: 1.5rem;
+}
+
+
+
+
+
