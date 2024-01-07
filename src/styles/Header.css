@@ -10,12 +10,12 @@ nav {
 }
 
 /* LOGO */
-.logo {
+.header .logo {
     width: 13rem;
 }
 
 /* LINK  */
-.link-container {
+.header .link-container {
     display: flex;
     gap: 3rem;
     justify-content: center;
@@ -23,13 +23,13 @@ nav {
     margin: 0 2rem;
 }
 
-nav a {
+.header a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
 }
 
-.cart {
+.header .cart {
     width: 1.5rem;
 }
 

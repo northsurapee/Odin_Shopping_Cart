@@ -1,11 +1,13 @@
-import Nav from "../component/Nav"
+import Header from "../component/Header"
+import Footer from "../component/Footer"
 
 export default function Shop() {
     return (
         <>
-            <Nav />
+            <Header />
             <div>Shop</div>
             <p>This is shop page.</p>
+            <Footer />
         </>
         
     )

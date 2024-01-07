@@ -1,11 +1,13 @@
-import Nav from "../component/Nav"
+import Header from "../component/Header"
+import Footer from "../component/Footer"
 
 export default function Home() {
     return (
         <>
-            <Nav />
+            <Header />
             <div>Home</div>
             <p>This is home page.</p>
+            <Footer />
         </>
         
     )
