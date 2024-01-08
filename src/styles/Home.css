@@ -1,4 +1,4 @@
-/* FIRST-CONTENT */
+/* SECTION 1 */
 div.first-content {
     display: flex;
     padding: 0rem 3rem;
@@ -115,7 +115,7 @@ section#two .left a:hover {
     position: absolute;
 }
 
-/* SECOND CONTENT */
+/* SECTION 2 */
 section#two {
     padding: 5rem 10rem;
     display: flex;
@@ -147,7 +147,32 @@ section#two p {
     font-size: .9em;
 }
 
+/* SECTION 3 */
+section#three {
+    padding: 5rem 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+section#three .text-container {
+    padding-right: 5em;
+    border-bottom: 2px solid black;
+}
+
+section#three h2 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+section#three img {
+    max-width: 400px;
+    transition: transform 1s ease-out;
+}
+
+section#three img:hover {
+    transform: scale(1.2);
+}
 
 
 

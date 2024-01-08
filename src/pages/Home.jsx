@@ -4,7 +4,8 @@ import textBackground from "../assets/innovate-text-gradient.png";
 import heroImg from "../assets/hero-img.png";
 import lipimg from "../assets/lips.png";
 import arrow from "../assets/arrow.svg";
-import smilingFace from "../assets/bestbuy-face.png"
+import smilingFace from "../assets/bestbuy-face.png";
+import desktop from "../assets/gaming-desktop.png";
 import { Link } from "react-router-dom";
 import "../styles/Home.css"
 import Marquee from "../component/Marquee";
@@ -60,6 +61,15 @@ export default function Home() {
                     <br />
                     <p>Quisque condimentum tempor cursus. Nulla nunc massa, porta a venenatis in, ornare at arcu. Nam pharetra, dolor id suscipit semper, nisl tellus lacinia ligula, et sollicitudin nibh lorem eget metus. Donec in aliquam tellus.</p>
                 </div>
+            </section>
+            <section id="three">
+                <div className="text-container">
+                    <span>Unleash their power. Unleash yours.</span>
+                    <h2>BEST GAMING <b>DESKTOPS.</b></h2>
+                </div>
+                <Link to="/shop">
+                    <img src={desktop} alt="desktop" />
+                </Link>
             </section>
             <Footer />
         </>
