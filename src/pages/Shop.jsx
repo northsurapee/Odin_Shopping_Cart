@@ -4,6 +4,7 @@ import shopBackground from "../assets/mw2-hd.jpg"
 import { useFetch } from "../hooks/useFetch"
 import { useParams, useSearchParams } from "react-router-dom";
 import "../styles/Shop.css"
+import { ItemsList } from "./ ItemList";
 
 export default function Shop() {
     const { category } = useParams();
@@ -28,27 +29,24 @@ export default function Shop() {
     return (
         <>
             <Header isBlack={false} />
-            <div className="loader-container">
-                <div className="loader"></div>
-            </div>
-            {/* <div className="shop-background">
-                <img src={shopBackground} alt="shop-background"/>
-                <h1>GAMING STORE</h1>
-            </div> */}
+            {!itemsData ? (
+                <div className="loader-container">
+                    <div className="loader"></div>
+                </div>
+            ) : (
+                <>
+                <div className="shop-background">
+                    <div className="img-container">
+                        <img src={shopBackground} alt="shop-background"/>
+                    </div>
+                    <h1>GAMING STORE</h1>
+                </div>
+                <div className="shop-main">
+                    <ItemsList items={itemsData.products}/>
+                </div>
+                </>
+            )}
             <Footer />
         </>
     );
-
-    // return !itemsData ? (
-    //     <div className="loader"></div>
-    // ) : (
-    //     <>
-    //         <Header isBlack={false} />
-    //         <div className="shop-background">
-    //             <img src={shopBackground} alt="shop-background"/>
-    //             <h1>GAMING STORE</h1>
-    //         </div>
-    //         <Footer />
-    //     </>
-    // );
 }
