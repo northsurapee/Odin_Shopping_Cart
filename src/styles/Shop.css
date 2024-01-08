@@ -1,3 +1,29 @@
+/* LOADER */
+.loader-container {
+    width: 100%;
+    height: calc(100vh - 361.2px - 89.47px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    margin: auto;
+    border: 4px solid #cbd5e0; /* border-slate-200 */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border-bottom-color: black; /* border-b-red-600 */
+    animation: spin 1s linear infinite; /* animate-spin duration-100 */
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* SHOP BACKGROUND */
+
 .shop-background {
     height: 13rem;
     display: flex;

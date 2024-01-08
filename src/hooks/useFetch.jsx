@@ -32,7 +32,7 @@ export function useFetch(url, fetchOptions, dependencies = null) {
       } catch (err) {
         if (!isMounted) return;
 
-        console.error(err);
+        // console.error(err);
         setError(err);
       } finally {
         if (isMounted) {
