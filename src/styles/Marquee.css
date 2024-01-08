@@ -1,0 +1,26 @@
+.marquee-container {
+    display: flex;
+    justify-content: flex-start;
+    background-color: black;
+    overflow: hidden;
+}
+
+.marquee-container h1 {
+    font-size: 4em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+    padding: 0 15rem;
+
+    animation: sliding 6s linear infinite;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

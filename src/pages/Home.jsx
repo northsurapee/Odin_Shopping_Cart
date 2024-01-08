@@ -7,13 +7,14 @@ import arrow from "../assets/arrow.svg";
 // import smilingFace from "../assets/bestbuy-face.png";
 import { Link } from "react-router-dom";
 import "../styles/Home.css"
+import Marquee from "../component/Marquee";
 
 
 export default function Home() {
     return (
         <>
             <Header />
-            <section>
+            <section id="one">
                 <div className="text-background">
                     <img src={textBackground} alt="text-background"/>
                 </div>
@@ -47,6 +48,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <Marquee content={"THE JOURNEY STARTS HERE"} />
             <Footer />
         </>
     )
