@@ -80,11 +80,12 @@ div.first-content {
     padding-left: 8rem;
 }
 
-.left p {
+section#one .left p {
     font-size: .8em;
 }
 
-.left a {
+section#one .left a,
+section#two .left a {
     margin: 1rem 0rem;
     text-align: center;
     color: black;
@@ -100,7 +101,8 @@ div.first-content {
     transition: background-color .3s ease-out;
 }
 
-.left a:hover {
+section#one .left a:hover,
+section#two .left a:hover {
     background-color: yellow;
 }
 
@@ -113,6 +115,37 @@ div.first-content {
     position: absolute;
 }
 
+/* SECOND CONTENT */
+section#two {
+    padding: 5rem 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+section#two .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#two .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+section#two h2 {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+section#two p {
+    font-size: .9em;
+}
 
 
 
