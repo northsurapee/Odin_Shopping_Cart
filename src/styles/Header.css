@@ -25,13 +25,28 @@ nav {
 }
 
 .header a {
-    color: black;
     text-decoration: none;
+    color: inherit;
     font-weight: 500;
 }
 
 .header .cart {
     width: 1.5rem;
+    fill: none;
+    stroke-width: 2px;
+}
+
+/* CHANGING COLOR */
+.black-text {
+    text-decoration: none;
+    color: black;
+    stroke: black;
+}
+
+.white-text {
+    text-decoration: none;
+    color: white;
+    stroke: white;
 }
 
 

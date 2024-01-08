@@ -14,7 +14,7 @@ import Marquee from "../component/Marquee";
 export default function Home() {
     return (
         <>
-            <Header />
+            <Header isBlack={true} />
             <section id="one">
                 <div className="text-background">
                     <img src={textBackground} alt="text-background"/>
