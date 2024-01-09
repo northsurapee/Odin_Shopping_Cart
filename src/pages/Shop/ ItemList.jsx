@@ -9,7 +9,7 @@ export function ItemsList({ items }) {
       {items.map((item) => {
         return (
           <Link
-            // to={`/product/${item.sku}`}
+            to={`/product/${item.sku}`}
             className="item-link"
             key={item.sku}
           >

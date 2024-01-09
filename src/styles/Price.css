@@ -1,0 +1,24 @@
+/* Price.css */
+
+.price-container {
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.regular-price {
+  display: block;
+  text-decoration: line-through;
+  font-size: 1.1rem;
+  color: rgb(107 114 128);
+  padding-bottom: 5px;
+}
+
+.price-symbol {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.price-value {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
