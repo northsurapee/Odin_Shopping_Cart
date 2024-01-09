@@ -4,6 +4,7 @@ import Footer from "../../component/Footer";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import Price from "../../component/Price";
+import { Carousel } from "./Carousel";
 
 export default function SingleProduct() {
 
@@ -30,6 +31,7 @@ export default function SingleProduct() {
                     salePrice={data.salePrice}
                     onSale={data.onSale}
                 />
+                <Carousel images={data.images} />
             </div>
             <Footer />
         </>
