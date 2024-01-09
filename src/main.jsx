@@ -12,7 +12,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/Shop",
-    element: <Shop />
+    element: <Shop />,
+    children: [
+      {
+        path: "category/:category"
+      }
+    ]
   }
 ])
 

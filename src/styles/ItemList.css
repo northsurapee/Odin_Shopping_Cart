@@ -1,7 +1,7 @@
 .item-container {
-    padding: 1rem;
+    padding: 1rem 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 320px);
+    grid-template-columns: repeat(3, 320px);
     gap: 20px;
     justify-content: center;
     align-items: c;
@@ -11,7 +11,7 @@
     padding: 1.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s ease-in-out;
@@ -19,10 +19,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: border-color .3s ease-in-out;
+  }
+
+  .item-link:hover {
+    border-color: lightgrey;
   }
   
-  .item-link:hover {
-    transform: scale(1.05);
+  .item-link:hover img{
+    transform: scale(1.1);
   }
   
   .image-container {
@@ -36,6 +41,7 @@
     height: 12rem;
     width: 100%;
     object-fit: contain;
+    transition: transform .3s ease-in-out;
   }
   
   .item-name {

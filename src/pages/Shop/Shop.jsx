@@ -1,12 +1,13 @@
 import Header from "../../component/Header"
 import Footer from "../../component/Footer"
-import shopBackground from "../../assets/mw2-hd.jpg"
 import { useFetch } from "../../hooks/useFetch"
 import { useParams, useSearchParams } from "react-router-dom";
 import "../../styles/Shop.css"
 import { ItemsList } from "./ ItemList";
 import { Pagination } from "../../component/Pagination";
 import { useEffect } from "react";
+import { Sidebar } from "./Sidebar";
+import { categoriesData } from "./categoriesData";
 
 export default function Shop() {
     const { category } = useParams();
@@ -14,6 +15,7 @@ export default function Shop() {
     const currCategoryId = category || "abcat0712000";
     const currPage = searchParams?.get("page") || 1;
     const sortBy = "customerReviewCount.dsc";
+    const categories = categoriesData.subCategories;
     const [loadingItems, errorItems, itemsData, anticipateFetch] = useFetch(`https://api.bestbuy.com/v1/products(categoryPath.id=${currCategoryId})?apiKey=wPuxAJ5Tl0BBktS2G1ihzmAT&sort=${sortBy}&show=categoryPath.id,categoryPath.name,customerReviewAverage,customerReviewCount,image,name,onSale,percentSavings,regularPrice,salePrice,shortDescription,sku&pageSize=18&page=${currPage}&format=json`);
 
     console.log(loadingItems);
@@ -26,10 +28,14 @@ export default function Shop() {
 
     if (errorItems)
     return (
-      <div>
-        <h1>An error occurred while loading the data!</h1>
-        <span>Please, try again...</span>
-        </div>
+        <>
+            <Header isBlack={true} />
+                <div className="error">
+                    <h1>An error occurred while loading the data!</h1>
+                    <span>Please, try again...</span>
+                </div>
+            <Footer />
+        </>
     );
 
     return (
@@ -42,13 +48,16 @@ export default function Shop() {
             ) : (
                 <>
                 <div className="shop-background">
-                    <div className="img-container">
-                        <img src={shopBackground} alt="shop-background"/>
-                    </div>
                     <h1>GAMING STORE</h1>
                 </div>
                 <div className="shop-main">
-                    <div className="left-side-bar"></div>
+                    <div className="left-side-bar">
+                        <Sidebar
+                            currCategory={category}
+                            categories={categories}
+                            onCategoryChange={anticipateFetch}
+                        />
+                    </div>
                     <div className="middle-result" style={{ opacity: loadingItems ? 0.5 : 1 }}>
                         <div className="top-result">
                             <span className="total-item">{itemsData.total} items</span>
