@@ -8,14 +8,17 @@ import { Pagination } from "../../component/Pagination";
 import { useEffect } from "react";
 import { Sidebar } from "./Sidebar";
 import { categoriesData } from "./categoriesData";
+import { SortItems } from "./SortItems";
 
 export default function Shop() {
     const { category } = useParams();
     const [searchParams] = useSearchParams();
     const currCategoryId = category || "abcat0712000";
     const currPage = searchParams?.get("page") || 1;
-    const sortBy = "customerReviewCount.dsc";
+    const sortBy = searchParams?.get("sort") || "customerReviewCount.dsc";
+
     const categories = categoriesData.subCategories;
+    
     const [loadingItems, errorItems, itemsData, anticipateFetch] = useFetch(`https://api.bestbuy.com/v1/products(categoryPath.id=${currCategoryId})?apiKey=wPuxAJ5Tl0BBktS2G1ihzmAT&sort=${sortBy}&show=categoryPath.id,categoryPath.name,customerReviewAverage,customerReviewCount,image,name,onSale,percentSavings,regularPrice,salePrice,shortDescription,sku&pageSize=18&page=${currPage}&format=json`);
 
     console.log(loadingItems);
@@ -61,6 +64,7 @@ export default function Shop() {
                     <div className="middle-result" style={{ opacity: loadingItems ? 0.5 : 1 }}>
                         <div className="top-result">
                             <span className="total-item">{itemsData.total} items</span>
+                            <SortItems onChange={anticipateFetch} />
                         </div>
                         <ItemsList items={itemsData.products}/>
                         <div>
