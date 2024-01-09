@@ -1,0 +1,35 @@
+.pagination-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    font-weight: 600;
+}
+
+.pagination-bar a {
+    width: 2.5rem;
+    height: 2.5rem;
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-bar a:hover {
+    opacity: .5;
+}
+
+.current-page {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+    opacity: .5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

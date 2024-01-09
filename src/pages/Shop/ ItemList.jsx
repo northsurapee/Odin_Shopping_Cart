@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import Rating from "../component/Rating";
-import "../styles/ItemList.css"
+import Rating from "../../component/Rating";
+import "../../styles/ItemList.css"
 
 export function ItemsList({ items }) {
   return (
