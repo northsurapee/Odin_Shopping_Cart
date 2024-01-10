@@ -1,5 +1,4 @@
-import Header from "../component/Header"
-import Footer from "../component/Footer"
+
 import textBackground from "../assets/innovate-text-gradient.png";
 import heroImg from "../assets/hero-img.png";
 import lipimg from "../assets/lips.png";
@@ -14,7 +13,6 @@ import Marquee from "../component/Marquee";
 export default function Home() {
     return (
         <>
-            <Header isBlack={true} />
             <section id="one">
                 <div className="text-background">
                     <img src={textBackground} alt="text-background"/>
@@ -87,7 +85,6 @@ export default function Home() {
                 </div>
                 
             </section>
-            <Footer />
         </>
     )
 }
