@@ -52,8 +52,7 @@
     word-wrap: normal;
   }
   
-  .price {
-    margin-top: auto;
+  .item-container .price {
     display: flex;
     justify-content: flex-start;
     align-items: center;

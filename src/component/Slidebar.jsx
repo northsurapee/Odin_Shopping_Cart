@@ -7,7 +7,7 @@ export default function Slidebar({ title, isOpen, children, onClose }) {
             <div className={`overlay ${isOpen ? "open" : ""}`}></div>
             <div className={`slidebar-container ${isOpen ? "open" : ""}`}>
                 <div className="top">
-                    <h2>{title}</h2>
+                    <h2 className="slide-bar-title">{title} ✨</h2>
                     <svg
                         viewBox="0 0 24 24"
                         stroke="#000000"

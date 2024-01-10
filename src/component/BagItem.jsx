@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import "../styles/BagItem.css"
 
 export default function BagItem({
     imgURL,
@@ -22,12 +23,15 @@ export default function BagItem({
 
     return (
         <div className="bag-item-container">
-            <img src={imgURL} alt="image" />
+            <div className="img-container">
+                <img src={imgURL} alt="image" />
+            </div>
             <div className="item-detail">
                 <div className="top">
                     <p className="name">{name}</p>
                     <svg 
-                        fill="none" 
+                        fill="#FFFFFF"
+                        stroke="#94a3b8"
                         viewBox="0 0 24 24" 
                         strokeWidth="1.5" 
                         className="delete"
@@ -41,7 +45,7 @@ export default function BagItem({
                     </svg>
                 </div>
                 <div className="bottom">
-                    <p className="price">{price}</p>
+                    <p className="price">$ {price}</p>
                     <div className="quantity-container">
                         <button className="decrease" onClick={handleDecreaseQuantity}>-</button>
                         <p className="quantity">{quantity}</p>
