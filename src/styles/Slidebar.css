@@ -1,0 +1,48 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 50;
+    display: none;
+}
+
+.slidebar-container {
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 35rem;
+    background-color: white; /* Sidebar background color */
+    z-index: 100;
+    display: none;
+}
+
+.slidebar-container .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.open {
+    display: block;
+}
+
+.slidebar-container.open{
+    animation: slideRight 1s ease-out;
+}
+
+@keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(35rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}

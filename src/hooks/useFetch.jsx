@@ -21,6 +21,7 @@ export function useFetch(url, fetchOptions, dependencies = null) {
 
       try {
         const res = await fetch(url, {
+          mode: 'cors',
           signal: controllerRef.current.signal,
           ...options,
         });
