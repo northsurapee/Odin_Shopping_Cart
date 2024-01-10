@@ -91,7 +91,8 @@ section#one .left p {
 }
 
 section#one .left a,
-section#two .left a {
+section#two .left a,
+button {
     margin: 1rem 0rem;
     text-align: center;
     color: black;
@@ -105,10 +106,13 @@ section#two .left a {
     font-weight: 700;
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 10);
     transition: background-color .3s ease-out;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 section#one .left a:hover,
-section#two .left a:hover {
+section#two .left a:hover, 
+button:hover {
     background-color: yellow;
 }
 

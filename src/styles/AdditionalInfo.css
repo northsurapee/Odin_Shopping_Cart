@@ -1,0 +1,58 @@
+.additional-info-container {
+    padding: 0rem 4rem;
+}
+
+/* INFO BLOCK */
+
+.info-block-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1 part for the first column, 3 parts for the second column */
+    gap: 10px; /* Adjust the gap between columns as needed */
+    margin-bottom: 3rem;
+}
+  
+.info-block-title {
+    font-size: 1.2rem; /* You can adjust the font size as needed */
+    font-weight: 500; /* You can adjust the font weight as needed */
+}
+  
+.info-block-ul {
+    max-width: 48rem; /* You can adjust the max-width as needed */
+    font-size: 0.875rem; /* You can adjust the font size as needed */
+    line-height: 1.5; /* You can adjust the line height as needed */
+    list-style-type: none;
+}
+
+.list-item {
+    margin-bottom: 20px; /* Equivalent to mb-7 in Tailwind */
+}
+
+.section-title {
+    font-size: 1.5rem; /* Equivalent to text-2xl in Tailwind */
+    margin-bottom: 30px; /* Equivalent to mb-12 in Tailwind */
+    padding-bottom: 10px; /* Equivalent to pb-3 in Tailwind */
+    font-weight: bold; /* Equivalent to font-bold in Tailwind */
+    border-bottom: 1px solid #e5e7eb; /* Equivalent to border-b in Tailwind */
+}
+
+/* FORMAT FEATURE */
+
+.feature-title {
+    font-weight: bold; /* Equivalent to font-bold in Tailwind */
+}
+
+/* DETAIL */
+
+.flex {
+    display: flex;
+}
+
+.left-item {
+    font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+    display: inline-block;
+    width: 50%; /* Equivalent to w-1/2 in Tailwind */
+}
+  
+.right-item {
+    width: 50%; /* Equivalent to w-1/2 in Tailwind */
+}

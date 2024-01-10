@@ -1,0 +1,28 @@
+.carousel-container {
+    max-width: 32rem;
+}
+
+.main-product {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.model-sku-container {
+    display: flex;
+    gap: 10px;
+    font-size: .9em;
+}
+
+.underline {
+    margin: 1rem 0rem;
+    border: 1px solid rgb(226 232 240);
+}
+

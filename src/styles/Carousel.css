@@ -44,5 +44,6 @@
   @media (min-width: 48em) {
     .swiper-bottom .swiper-slide img {
       height: 6rem; 
+      width: 6rem;
     }
   }
