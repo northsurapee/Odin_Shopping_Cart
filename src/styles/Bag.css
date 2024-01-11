@@ -1,0 +1,45 @@
+.children {
+    height: 100%;
+}
+
+.children-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.checkout-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid #94a3b8;
+}
+
+.checkout-container .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.checkout-container .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-container button {
+    max-width: none;
+    width: 100%;
+}
+
+.subtotal {
+    font-weight: 500;
+}
+
+.empty-bag {
+    padding-left: 1rem;
+}

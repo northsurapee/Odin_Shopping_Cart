@@ -52,8 +52,25 @@ nav {
     stroke: white;
 }
 
+/* BAG ICON CONTAINER */
+.bag-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
-
+.total-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 50%;
+    background-color: red;
+}
 
 
 

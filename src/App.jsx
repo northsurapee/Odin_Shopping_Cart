@@ -11,30 +11,70 @@ export default function App() {
     // Control flow
     const [isBagOpen, SetBagOpen] = useState(false);
     const [bagItem, setBagItem] = useState([]);
+    const [totalQuantity, setTotalQuantity] = useState(0);
 
-    function handleAddItem(item) {
-      if (!bagItem.some(existingItem => existingItem.name === item.name)) {
-          const newShoppingBagItem = [...bagItem, item];
+    function handleIncreaseQuantity(itemName) {
+        const updatedBagItem = bagItem.map(item => {
+            if (item[0].name === itemName) {
+                return [item[0], item[1] + 1];
+            }
+            return item;
+        });
+        setBagItem(updatedBagItem);
+        setTotalQuantity(totalQuantity + 1);
+    }
+
+    function handleDecreaseQuantity(itemName) {
+        const selectedItem = bagItem.find(item => item[0].name === itemName);
+        if (selectedItem[1] === 1) {
+            handleDeleteItem(itemName)
+            return;
+        }
+        const updatedBagItem = bagItem.map(item => {
+            if (item[0].name === itemName) {
+                return [item[0], item[1] - 1];
+            }
+            return item;
+        });
+        setBagItem(updatedBagItem);
+        setTotalQuantity(totalQuantity - 1);
+    }
+    
+
+    function handleAddItem(data) {
+      if (!bagItem.some(existingItem => existingItem[0].name === data.name)) {
+          const newShoppingBagItem = [...bagItem, [data, 1]];
           setBagItem(newShoppingBagItem);
           console.log("Done add item!")
+          console.log(data)
+          console.log(newShoppingBagItem)
+          setTotalQuantity(totalQuantity + 1);
       } else {
           console.log("Item already exists in the shopping bag");
       }
     }
   
     function handleDeleteItem(itemName) {
-        const updatedShoppingBagItem = bagItem.filter(item => item.name !== itemName);
+        const selectedItem = bagItem.find(item => item[0].name === itemName);
+        const updatedShoppingBagItem = bagItem.filter((item) => item[0].name !== itemName);
         setBagItem(updatedShoppingBagItem);
+        setTotalQuantity(totalQuantity - selectedItem[1])
+
     }
 
     return (
         <>
-            <Header onOpen={() => SetBagOpen(true)}/>
+            <Header 
+                onOpen={() => SetBagOpen(true)}
+                totalQuantity={totalQuantity}
+            />
             <Bag 
                 initialBagItem={bagItem}
                 isOpen={isBagOpen}
                 onClose={() => SetBagOpen(false)}
                 onDelete={handleDeleteItem}
+                onIncrease={handleIncreaseQuantity}
+                onDecrease={handleDecreaseQuantity}
             />
             <Routes>
                 <Route path="/" element={<Home />} />

@@ -11,6 +11,7 @@
 
 .slidebar-container {
     padding: 2rem;
+    padding-bottom: 5rem;
     position: fixed;
     top: 0;
     right: 0;

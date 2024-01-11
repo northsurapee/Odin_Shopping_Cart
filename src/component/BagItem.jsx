@@ -1,25 +1,15 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import "../styles/BagItem.css"
 
 export default function BagItem({
     imgURL,
     name,
     price,
-    onDelete
+    onDelete,
+    onIncrease,
+    onDecrease,
+    count
 }) {
-    const [quantity, setQuantity] = useState(1);
-    console.log("render a bag item!")
-    console.log(imgURL)
-    console.log(name)
-    console.log(price)
-    function handleDecreaseQuantity() {
-        if((quantity - 1) === 0) {
-            onDelete(name)
-        } else {
-            setQuantity(quantity - 1)
-        }
-    }
 
     return (
         <div className="bag-item-container">
@@ -47,9 +37,9 @@ export default function BagItem({
                 <div className="bottom">
                     <p className="price">$ {price}</p>
                     <div className="quantity-container">
-                        <button className="decrease" onClick={handleDecreaseQuantity}>-</button>
-                        <p className="quantity">{quantity}</p>
-                        <button className="increase" onClick={() => setQuantity(quantity + 1)}>+</button>
+                        <button className="decrease" onClick={() => onDecrease(name)}>-</button>
+                        <p className="quantity">{count}</p>
+                        <button className="increase" onClick={() => onIncrease(name)}>+</button>
                     </div>
                 </div>
             </div>
