@@ -10,9 +10,9 @@ export default function Rating({itemRating, reviewCount, showRating = false}) {
                 rating={itemRating}
                 starRatedColor="#fbbf24"
                 numberOfStars={5}
-                name='rating'
-                starDimension={20}
-                starSpacing={1}
+                name="rating"
+                starDimension="20"
+                starSpacing="1"
             />
             {showRating && (
                 <b>{itemRating}</b>

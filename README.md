@@ -1,15 +1,6 @@
-# React + Vite
+# Odin_Shopping_Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Commands
-
-- `npm install` : (**Must** run after clone this template) to install all node_modules
-- `npm run dev` : to run web on local host
-- `npx prettier . --write` : to style all files
-- `npx prettier . --check` : Check if all files styled
+• Live demo : https://main--tubular-kataifi-89a4a7.netlify.app/product/6473553
+• Developed an multiple-page web application in frontend part of E-Commerce Web App using Vite + React and React Router. 
+•Created a user-friendly interface with navigation between home and shop pages, incorporating features such as shopping bag and quantity input.
+• Utilized the **_BestBuy API_** to fetch and display **_real-world_** product information dynamically within the application.

@@ -16,7 +16,6 @@ export default function Bag({ initialBagItem, isOpen, onClose, onDelete, onIncre
         const factor = 10 ** decimalPlaces;
         console.log(Math.round(number * factor) / factor);
         return Math.round(number * factor) / factor;
-        
     }
     
     return (
