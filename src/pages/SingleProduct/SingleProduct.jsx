@@ -11,7 +11,7 @@ import { decode } from "html-entities";
 export default function SingleProduct({onAdd}) {
     console.log("Render-SingleProduct")
     const { id } = useParams();
-    const [loading, error, rawData] = useFetch(`https://api.bestbuy.com/v1/products(sku=${id})?apiKey=wPuxAJ5Tl0BBktS2G1ihzmAT&show=addToCartUrl,categoryPath.id,categoryPath.name,color,customerReviewAverage,customerReviewCount,description,details.name,details.value,features.feature,image,images,includedItemList.includedItem,longDescription,manufacturer,modelNumber,name,onSale,regularPrice,salePrice,shortDescription,sku,productVariations&format=json`);
+    const [loading, error, rawData] = useFetch(`https://api.bestbuy.com/v1/products(sku=${id})?apiKey=VIHFIWLgsIL8eIpAu8Sc1UlM&show=addToCartUrl,categoryPath.id,categoryPath.name,color,customerReviewAverage,customerReviewCount,description,details.name,details.value,features.feature,image,images,includedItemList.includedItem,longDescription,manufacturer,modelNumber,name,onSale,regularPrice,salePrice,shortDescription,sku,productVariations&format=json`);
     if (loading || error) return (
         <>
             <div className="loader-container">
