@@ -17,8 +17,9 @@ export default function Shop() {
     const sortBy = searchParams?.get("sort") || "customerReviewCount.dsc";
 
     const categories = categoriesData.subCategories;
-    
-    const [loadingItems, errorItems, itemsData, anticipateFetch] = useFetch(`https://api.bestbuy.com/v1/products(categoryPath.id=${currCategoryId})?apiKey=wPuxAJ5Tl0BBktS2G1ihzmAT&sort=${sortBy}&show=categoryPath.id,categoryPath.name,customerReviewAverage,customerReviewCount,image,name,onSale,percentSavings,regularPrice,salePrice,shortDescription,sku&pageSize=18&page=${currPage}&format=json`);
+
+    // apiKey=wPuxAJ5Tl0BBktS2G1ihzmAT
+    const [loadingItems, errorItems, itemsData, anticipateFetch] = useFetch(`https://api.bestbuy.com/v1/products(categoryPath.id=${currCategoryId})?apiKey=VIHFIWLgsIL8eIpAu8Sc1UlM&sort=${sortBy}&show=categoryPath.id,categoryPath.name,customerReviewAverage,customerReviewCount,image,name,onSale,percentSavings,regularPrice,salePrice,shortDescription,sku&pageSize=18&page=${currPage}&format=json`);
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
